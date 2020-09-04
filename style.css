@@ -1,0 +1,261 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #333333
+    
+}
+
+/*------Top info/nav bar-------*/
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 63px;
+    box-shadow: 0px 6px 10px #00000019;
+    padding: 0 30px 0 30px;
+}
+
+    #logo {
+        width: 52px;
+        height: 27px;
+    }
+
+        #logo h1 {
+            font-weight: 900;
+            font-size: 20px;
+            letter-spacing: -1px;
+        }
+
+    #username {
+        width: 100px;
+        height: 27px;
+    }
+
+        #username h2 {
+            font-weight: 400;
+            font-size: 20px
+        }
+
+/*-------Main content--------*/
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+    width: 68%;
+}
+
+    /*------section for the + Todo button-----*/
+    .newTodo {
+        width: 100%;
+        padding: 77px 0px 70px 0px;
+    }
+
+        #newTodoBtn {
+            top: 140 px;
+            left: 221px;
+            height: 51px;
+            width: 183px;
+            background-color: white;
+            border: solid 1px #333333;
+            font-size: 23px;
+        }
+
+        #newTodoBtn:hover {
+            background-color: #56D4C2;
+        }
+
+    /*------Section for the modal--------*/
+    .modalOverlay {
+        /*kilde: https://www.w3schools.com/howto/howto_css_modals.asp*/
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 195px;
+        padding-left: 38%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+    }
+
+        .modal {
+            box-shadow: 0px 1px 8px #00000029;
+            border-radius: 8px;
+            left: 38%;
+            width: 24%;
+            min-height: 200px;
+            background-color: white;
+        }
+
+            .modalForm {
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+                .iconClose {
+                    align-self: flex-end;
+                    width: 12px;
+                }
+                
+                .modalForm h3 {
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin-bottom: 42px;
+                }
+
+                .textBox, #createTodoBtn, .modalform label {
+                    margin: 0 20px 0 20px;
+                }
+
+                .modalForm label {
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+
+                .textBox {
+                    margin-bottom: 20px;
+                }
+
+                    input[type=text] {
+                        width: 100%;
+                        border: solid 1px #B6B6B6;
+                        border-radius: 5px;
+                        height: 40px;
+                    }
+
+                    #availChars {
+                        font-size: 12px;
+                    }
+
+                #createTodoBtn {
+                    background-color: #56D4C2;
+                    color: white;
+                    height: 32px;
+                    border: none;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+
+                    #createTodoBtn:hover {
+                        background-color: #91d9cf;
+                    }
+
+    /*-----Section for the todo cards------*/
+    .todoCards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 40px;
+        width: 100%;
+        height: 187px;
+    }
+
+        .card {
+            position: relative;
+            padding: 27px 22px 24px 30px;
+            box-shadow: 0px 8px 16px #5DD3D829;
+            border-radius: 8px;
+        }
+
+            .iconStyle {
+                font-size: 21px;
+                color: #1f1f1f;
+            }
+
+            .card button {
+                position: absolute;
+                bottom: 24px;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 4px 20px 4px 20px;
+                font-weight: bold;
+                font-size: 11px;
+            }
+
+            .deleteTodo {
+                right: 116px;
+                background-color: #EF3340;
+            }
+
+            .deleteTodo:hover {
+                background-color: #f06c75;
+            }
+
+            .completeTodo {
+                right: 22px;
+                background-color: #56D4C2;
+            }
+
+            .completeTodo:hover {
+                background-color: #91d9cf;
+            }
+
+            .todoTitle {
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 7px;
+            }
+
+            .todoDescription {
+                font-size: 14px;
+                margin-bottom: 24px;
+            }
+
+    /*-------Section for completed todos-------*/
+    .completedTodos {
+        width: 100%;
+        height: 200px;
+        padding-top: 75px;
+    }
+
+        #completedTitle {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .dateCheckbox {
+            float: right;
+            margin: 5px 25px 7px 0;
+        }
+
+        .dateCheckbox label, #filterText {
+            color: #909090;
+            font-size: 14px;
+            padding-right: 13px;
+        }
+
+        #completedTable {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+            .tableHeader, .tableRow {
+                display: grid;
+                grid-template-columns: 1fr 1fr 2fr 1fr;
+                align-content: center;
+                padding: 6px 35px 6px 35px;
+                height: 25px;
+            }
+
+                .tableRow p {
+                    color: #8B8B8B;
+                    font-size: 14px;
+                }
+
+                .tableHeader h3 {
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+
+                .tableHeader {
+                    background-color: #E6E6E6;
+                    text-align: left;
+                }
+
+
+                
