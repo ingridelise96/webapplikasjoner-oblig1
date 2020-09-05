@@ -1,1 +1,1 @@
-# webapplikasjoner-oblig1
+# webapplikasjoner
