@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+      <link rel="stylesheet" href="todo-style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/946902f957.js" crossorigin="anonymous" SameSite="none, secure"></script>
+  </head>
+  <body>
+      <header>
+
+          <!------Top info/nav bar------->
+
+          <nav>
+            <figure id="logo">
+                  <h1>HIOF</h1>
+            </figure>
+            <div id="username">
+                <h2>User user</h2>
+            </div>
+
+          </nav>
+      </header>
+
+      <!-------Main content-------->
+
+      <main class="content">
+
+          <!------section for the + Todo button----->
+
+          <section class="newTodo">
+                <button id="newTodoBtn">
+                    <span class="iconStyle">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    Todo
+                </button>
+          </section>
+
+          <!--------section for the modal------>
+          <section class="modalOverlay">
+                <div class="modal">
+                
+                    <form class="modalForm" action="javascript:void(0);" autocomplete="off">
+
+                        <span class="iconClose">  
+                            <i class="fas fa-times"></i>
+                        </span>  
+
+                        <h3>New todo</h3>
+
+                        <div class="textBox">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title" maxlength="20">
+                        </div>
+                        
+                        <div class="textBox">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" name="description" maxlength="30">
+                            <p id="availChars">Remaining characters: 30</p>
+                        </div>
+                        
+                        <div class="textBox">
+                            <label for="author">Author</label>
+                            <input type="text" id="author" name="author" maxlength="20">
+                        </div>
+
+                        <input type="submit" value="Create" id="createTodoBtn">
+                    </form>
+
+                </div>
+            </section>
+
+          <!-----Section for the todo cards------>
+
+          <section class="todoCards">
+
+              <div class="card">
+                  <h3 class="todoTitle"></h3>
+                  <p class="todoDescription"></p>
+                  <button class="deleteTodo">Delete</button>
+                  <button class="completeTodo">Complete</button>
+              </div>
+              <div class="card">
+                    <h3 class="todoTitle"></h3>
+                    <p class="todoDescription"></p>
+                    <button class="deleteTodo">Delete</button>
+                    <button class="completeTodo">Complete</button>
+              </div>
+              <div class="card">
+                    <h3 class="todoTitle"></h3>
+                    <p class="todoDescription"></p>
+                    <button class="deleteTodo">Delete</button>
+                    <button class="completeTodo">Complete</button>
+              </div>
+
+          </section>
+
+          <!-------Section for completed todos------->
+
+          <section class="completedTodos">
+
+                <h2 id="completedTitle">Completed todos</h2>
+                
+                <section class="dateCheckbox">
+                        <p id="filterText">Filter by date</p>
+
+                        <input type="radio" id="filterNew" name="filterNew" value="new">
+                        <label for="filterNew">Most recent</label>
+
+                        <input type="radio" id="filterOld" name="filterOld" value="old">
+                        <label for="filterOld">Oldest</label>
+
+                </section>
+                
+                <section id="completedTable">
+                    <div class="tableHeader">
+                        <div><h3>Title</h3></div>
+                        <div><h3>Author</h3></div>
+                        <div><h3>Description</h3></div>
+                        <div><h3>Completed date</h3></div>
+                    </div>
+                    <div class="tableRow">
+                        <div><p></p></div>
+                        <div><p></p></div>
+                        <div><p></p></div>
+                        <div><p></p></div>
+                    </div>
+                    <div class="tableRow">
+                        <div><p></p></div>
+                        <div><p></p></div>
+                        <div><p></p></div>
+                        <div><p></p></div>
+                    </div>
+                    <div class="tableRow">
+                        <div><p></p></div>
+                        <div><p></p></div>
+                        <div><p></p></div>
+                        <div><p></p></div>
+                    </div>
+                </section>
+          </section>
+
+      </main>
+      <footer>
+      </footer>
+  </body>
+  <script src="todo-script.js"></script>
+</html>
