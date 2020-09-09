@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel": "babel main.js --presets=@babel/preset-env --out-dir lib"
   },
   "repository": {
     "type": "git",
