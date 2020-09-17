@@ -1,0 +1,17 @@
+{
+  "name": "99_oppgave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "expect": "^26.4.2",
+    "nodemon": "^2.0.4"
+  }
+}
